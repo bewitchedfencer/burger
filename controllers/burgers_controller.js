@@ -1,5 +1,8 @@
-//import burger.js
-var express = require(',/express');
+//importing burger.js
+var burger = require('./models/burger.js')
+
+//importing express
+var express = require('express');
 
 var app = express();
 
