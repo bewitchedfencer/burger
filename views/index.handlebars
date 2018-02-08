@@ -1,19 +1,20 @@
 {{!this is the template that will go inside the main layout}}
+
+  {{#each burger}}
 <div id='leftBox'>
-  {{#each burger}}
+
     {{#unless devoured}}
-      {{> burger/burger-block devoured=true}}
+      {{> burger/burger-block devoured=false}}
     {{/unless}}
-  {{/each}}
 </div>
+  {{/each}}
 
-
-<div id='rightBox'>
   {{#each burger}}
+<div id='rightBox'>
     {{#if devoured}}
     {{/if}}
-  {{/each}}
 </div>
+  {{/each}}
 
 <h2>Add a Burger!</h2>
 <form class="create-form">

@@ -38,7 +38,7 @@ insertOne:function(tableInput, col, val, cb){
 },
 //updateOne() function that will update the Boolean value
 updateOne:function(col, val, id_col, id, cb){
-    var queryString = `SET {${col}:${val}} WHERE ${id_col}=${id}`;
+    var queryString = `SET ${col}=${val}} WHERE ${id_col}=${id}`;
     connection.query(queryString, function(error, data){
         if(error) throw error;
         cb(data);

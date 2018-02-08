@@ -13,7 +13,7 @@ var burger = {
         });
     },
     eatBurger:function(id, cb){
-        orm.updateOne('devoured', false, 'id', id, function(result){
+        orm.updateOne('devoured', true, 'id', id, function(result){
             cb(result);
         });
     }
